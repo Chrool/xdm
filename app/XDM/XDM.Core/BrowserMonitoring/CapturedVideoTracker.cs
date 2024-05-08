@@ -71,7 +71,7 @@ namespace XDM.Core.BrowserMonitoring
         {
             lock (this)
             {
-                var list = new List<(string ID, string File, string DisplayName, DateTime Time)>();
+                var list = new List<(string ID, string File, string DisplayName, DateTime Time, Dictionary<string, List<string>> Headers)>();
                 foreach (var e in ytVideoList)
                 {
                     list.Add((e.Key, encode ? Helpers.EncodeToCharCode(e.Value.Info.File) : e.Value.Info.File, e.Value.DisplayInfo.Quality, e.Value.DisplayInfo.CreationTime, e.Value.Info.Headers));
