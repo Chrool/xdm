@@ -328,7 +328,8 @@ namespace XDM.Core.BrowserMonitoring
                 {
                     Id = a.ID,
                     Text = a.File,
-                    Info = a.DisplayName
+                    Info = a.DisplayName,
+                    Headers = a.Headers
                 }).ToList(),
                 MimeList = new string[] { "video", "audio", "mpegurl", "f4m", "m3u8", "dash" },
                 BlockedMimeList = new string[] { "text/javascript", "application/javascript", "text/css", "text/html" },
