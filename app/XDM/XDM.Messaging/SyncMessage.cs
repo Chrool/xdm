@@ -104,5 +104,6 @@ namespace XDM.Core.BrowserMonitoring
         public string Id { get; set; }
         public string Text { get; set; }
         public string Info { get; set; }
+        public Dictionary<string, List<string>> Headers { get; set; }
     }
 }
