@@ -349,6 +349,16 @@ namespace XDM.Core.BrowserMonitoring
                     writer.WritePropertyName("tabId");
                     writer.WriteValue(video.TabId);
 
+                    
+                    writer.WritePropertyName("headers");
+                        writer.WriteStartObject();
+                        foreach (var header in video.Headers)
+                        {
+                             writer.WritePropertyName(header.Key);
+                             writer.WriteValue(header.Value[0]);
+                        }
+                        
+                        writer.WriteEndObject();
                     writer.WriteEndObject();
                 }
                 writer.WriteEndArray();
